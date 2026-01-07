@@ -1,0 +1,595 @@
+*{
+    box-sizing: border-box;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    font-family:sans-serif;
+}
+
+body{
+    background: black;
+}
+
+.navbar{
+    background-image: linear-gradient(to right, #000, #68221aee);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation{
+    background: rgb(37, 35, 35);
+    border: 2px red solid;
+    border-radius: 20px;
+    width: 1100px;
+    display: flex;
+}
+
+.logo{
+    /* background-color: aqua; */
+    width: 80px;
+    margin-left: 5px;
+}
+
+.logo img{
+    width: 80px;
+}
+
+.logo img:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
+
+.list-navbar{
+    /* background-color: aliceblue; */
+    width: 450px;
+    height: 100%;
+    margin: 0px 80px 0px 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.list-navbar a{
+    /* background-color: bisque; */
+    height: fit-content;
+    padding: 20px;
+    color: white;
+}
+
+.list-navbar a:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.wa-navbar{
+    width: 80px;
+    margin-left: 5px;
+}
+
+.wa-navbar img{
+    width:80px;
+}
+
+.wa-navbar img:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+
+.search-login{
+    /* background-color: aqua; */
+    width: max-content;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#search{
+    background-color: transparent;
+    color: white;
+    margin: 0px 10px 0px 0px;
+    padding: 10px;
+    border: 1px white solid;
+    border-radius: 5px;
+    width: 200px;
+    height: 40px;
+}
+
+
+#search::placeholder{
+    color: white;
+    padding: 30px;
+}
+
+.login{
+    color: red;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+}
+
+.login:hover{
+    background-color: red;
+    color: white;
+    transform: scale(0.9);
+}
+
+.about{
+    background-image: linear-gradient(to right, #000, #68221aee);
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    min-height: 50vh;
+}
+
+.about-content {
+    /* background-color: aliceblue; */
+    flex: 1;
+    max-width: 30%;
+}
+
+.logo-about{
+    width: 160px;
+}
+
+.deskripsi-about{
+    margin: 0px 0px 0px 40px;
+}
+
+.keunggulan li{
+    padding: 10px;
+}
+
+.slider{
+    /* background-color: aqua; */
+    margin: 0px 0px 0px 50px;
+    height: 50vh;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.slider-container {
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.slider-wrapper{
+    display: flex;
+    width: 200%;
+    animation: geserOtomatis 15s infinite;
+    border-radius: 20px;
+}
+
+.img-slider{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+@keyframes geserOtomatis {
+    0% { transform: translateX();}
+    45% { transform: translateX();}
+
+    50% { transform: translateX(-50%);}
+    90% { transform: translateX(-50%);}
+
+    100% { transform: translateX();}
+}
+
+/* populer content */
+
+.popular-content{
+    margin:30px 0px 0px 0px;
+}
+
+.popular-content h2{
+    float: left;
+    font-size: 30px;
+    margin: 0px 0px 0px 80px;
+}
+
+.p-content {
+    /* background-color: aqua; */
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 0px 0px 250px;
+    gap: 20px;
+    text-align: center;
+}
+
+
+.p-content img{
+    width: 150px;
+    border-radius: 10px;
+}
+
+.p-content h4{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.p-content h4:hover{
+    color: red;
+}
+
+/* main content */
+
+.container{
+    /* background-color: aliceblue; */
+    margin: 40px 0px 0px 80px;
+    display: flex;
+    flex-direction: row;
+}
+
+main h2{
+    font-size: 30px;
+}
+
+.sidebar{
+    width: fit-content;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.category-games-container{
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    white-space: nowrap;
+    flex-direction: column;
+    align-items: start;
+    width: fit-content;
+    margin: 0;
+    gap: 10px;
+}
+
+.sidebar a{    
+    background-color: #0d0d0d;
+    border-radius: 10px;
+    padding: 12px 20px;
+}
+
+.sidebar a:hover{
+    background-color: red;
+}
+
+.content-section {
+    display: none;
+    padding: 20px;
+}
+
+.content-area > #produk-terlaris{
+    display: block;
+}
+
+.content-area:has(#games:target) > #produk-terlaris,
+.content-area:has(#voucher:target) > #produk-terlaris {
+    display: none;
+}
+
+#produk-terlaris:target,#games:target,#voucher:target{
+    display: block;
+}
+
+.content-area {
+    display: flex;
+    flex-grow: 1;   
+}
+
+.terlaris-item, .games-item, .voucher-item{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.terlaris-grid figure, .games-grid figure, .voucher-grid figure{
+    font-style: normal;
+    font-weight: 700;
+    width: 100%;
+    white-space: none;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.terlaris-grid figure p, .games-grid figure p, .voucher-grid p{
+    margin: 0;
+}
+
+#produk-terlaris img, #games img, #voucher img{
+    max-width: 150px;
+    border-radius: 10px;
+}
+
+.terlaris-item figcaption:hover, .games-item figcaption:hover, .voucher-item figcaption:hover{
+    color: red;
+}
+
+/* footer */
+
+footer{
+    background-image: linear-gradient(to right, #000, #68221aee);
+}  
+
+.footer-wrap{
+    /* background-color: blue; */
+    display: flex;
+    
+}
+
+.deskripsi-footer{
+    /* background-color: aquamarine; */
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+}
+
+.logo-footer{
+    /* background-color: black; */
+    width: 200px;
+    text-align: center;
+    justify-items: start;
+    margin: 0;
+}
+
+.logo-footer img{
+    width: 200px;
+}
+
+.logo-footer h3{
+    font-size: medium;
+    margin: 0;
+}
+
+.sitemap{
+    margin: 30px;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+}
+
+.sitemap p{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sitemap a{
+    margin: 0px 0px 15px 0px;
+}
+
+.sitemap a:first-of-type{
+    margin-top: 10px;
+}
+
+.sitemap a:hover{
+    color: red;
+}
+
+/* login */
+
+.login-container{
+    background-image: linear-gradient(to right, #000, #68221aee ) ;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    /* justify-items: center; */
+}
+
+.login-card{
+    background-color: black;
+    border-radius: 10px;
+    min-width: 60vh;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 2%;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-header{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.login-header img {
+    width: 160px;
+}
+
+.login-header p{
+    text-transform: capitalize;
+    margin: 0;
+    margin-bottom:30px;
+}
+
+.login-form{
+    /* background-color: blue; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group{
+    /* background-color: azure; */
+    position: relative;
+}
+
+.input-wrapper{
+    position: relative;
+    width: 250px;
+    margin: 0px 25px 20px 25px;
+}
+
+.password-wrapper{
+    margin-top: 5px;
+}
+
+.input-field{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    background-color: transparent;
+    z-index: 2;
+    position: relative;
+    border: 1px solid #ccc;
+}
+
+.input-wrapper label{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #888;
+    font-size: 14px;
+    pointer-events: none;
+    transition: 0.2s ease all;
+    z-index: 0;
+}
+
+.input-field:focus + label,
+.input-field:not(:placeholder-shown) + label {
+top: -14px !important; 
+left: 2px; 
+font-size: 12px;
+color: #999;
+padding: 0 5px;
+}
+
+.input-field::placeholder{
+    color: transparent;
+}
+
+.form-option{
+    /* background-color: aqua; */
+    display: flex;
+    width: 250px;
+    height: 20px;
+    position: relative;
+}
+
+
+.remember-wrapper{
+    /* background-color: #888; */
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    align-items: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.forgot-password{
+    /* background-color: #777; */
+    width: fit-content;
+    color: red;
+    align-items: center;
+    font-size: 12px;
+    display: flex;
+    margin-left: 50px;
+}
+
+.login-btn{
+    background-image: linear-gradient(to right, #000, #68221aee );
+    border-radius: 8px;
+    box-shadow: -2px 5px 10px #222;
+    width: 250px;
+    height: 35px;
+    margin: 20px 0px;
+    outline: none;
+    border: 0px solid transparent;
+    cursor: pointer;
+}
+
+.login-btn:hover{
+    transform: scale(1.05);
+    outline: none;
+}
+
+.btn-text{
+    color: #ffff;
+}
+
+.divider{
+    /* background-color: #888; */
+    margin: 20px;
+}
+
+.divider span{
+    font-size: 12px;
+}
+
+.social-login{
+    /* background-color: #888; */
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-btn{
+    background-color: transparent;
+    width: 100px;
+    height: 35px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid #333;
+}
+
+.google-btn{
+    padding-left: 30px;
+    background-image: url(/properti\ gambar/google.png);
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    cursor: pointer;
+}
+
+.github-btn{
+    padding-left: 30px;
+    background-image: url(/properti\ gambar/github.png);
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    cursor: pointer;
+}
+
+.social-btn:hover{
+    transform: scale(1.05);
+}
+
+.social-icon{
+    font-size: 14px;
+}
+
+.social-icon:hover{
+    color: red;
+}
+
+.signup-link{
+    margin: 14px 0px 30px 0px;
+}
+
+.signup-link p{
+    font-size: 12px;
+}
+
+.signup-link a{
+    color: red;
+}
