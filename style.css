@@ -373,11 +373,11 @@ body{
     }
 
     .p-content img{
-        width: 90px;
+        width: 80px;
     }
 
     .p-content h4{
-        font-size: 10px;
+        font-size: 9px;
         font-weight: bold;
     }
 }
@@ -502,7 +502,7 @@ main h2{
     }
 
     .sidebar a{
-        font-size: 15px;
+        font-size: 12px;
     }
 
     .sidebar h2{
@@ -516,11 +516,11 @@ main h2{
     }
 
     .terlaris-grid figure, .games-grid figure, .voucher-grid figure{
-        font-size: 10px;
+        font-size: 9px;
     }
 
     #produk-terlaris img, #games img, #voucher img{
-        max-width: 90px;
+        max-width: 80px;
     }
 
 }
