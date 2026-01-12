@@ -373,7 +373,7 @@ body{
     }
 
     .p-content img{
-        width: 80px;
+        width: 90px;
     }
 
     .p-content h4{
@@ -520,7 +520,7 @@ main h2{
     }
 
     #produk-terlaris img, #games img, #voucher img{
-        max-width: 80px;
+        max-width: 90px;
     }
 
 }
